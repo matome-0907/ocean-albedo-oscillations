@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oceanic VR Odyssey | NASA Earth Observations VR</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .wave-mask {
+            -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 320' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000000' d='M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'/%3E%3C/svg%3E");
+            mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1440 320' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23000000' d='M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'/%3E%3C/svg%3E");
+            -webkit-mask-size: cover;
+            mask-size: cover;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #00d4ff 0%, #0066ff 50%, #3a00ff 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <div id="vanta-bg" class="fixed inset-0 z-0"></div>
+    
+    <nav class="relative z-10 py-6 px-6 lg:px-12 flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+            <i data-feather="globe" class="text-cyan-400"></i>
+            <span class="text-xl font-bold gradient-text">OceanicVR</span>
+        </div>
+        <div class="hidden md:flex space-x-8">
+            <a href="#" class="hover:text-cyan-300 transition">Experience</a>
+            <a href="#" class="hover:text-cyan-300 transition">Science</a>
+            <a href="#" class="hover:text-cyan-300 transition">About</a>
+            <a href="#" class="hover:text-cyan-300 transition">Contact</a>
+        </div>
+        <button class="md:hidden">
+            <i data-feather="menu"></i>
+        </button>
+    </nav>
+
+    <main class="relative z-10">
+        <section class="container mx-auto px-6 lg:px-12 py-24 md:py-32">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    Explore <span class="gradient-text">Ocean Albedo</span> in <br>Virtual Reality
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
+                    Immerse yourself in NASA's Earth observation data and discover how the ocean's changing reflectivity impacts our planet.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="#experience" class="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-4 rounded-full font-medium transition duration-300 transform hover:scale-105">
+                        Begin Journey
+                        <i data-feather="arrow-right" class="ml-2 inline"></i>
+                    </a>
+                    <a href="#learn" class="border-2 border-cyan-400 text-cyan-400 hover:bg-cyan-400/10 px-8 py-4 rounded-full font-medium transition duration-300">
+                        Learn the Science
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="wave-mask bg-gradient-to-b from-cyan-900/80 to-gray-900 py-24">
+            <div class="container mx-auto px-6 lg:px-12">
+                <div class="max-w-4xl mx-auto text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        The <span class="gradient-text">VR Experience</span>
+                    </h2>
+                    <p class="text-xl text-gray-300">
+                        Step into an interactive visualization of NASA's ocean albedo data spanning decades of observations.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/50 transition">
+                        <div class="w-16 h-16 bg-cyan-500/10 rounded-lg flex items-center justify-center mb-4">
+                            <i data-feather="eye" class="text-cyan-400 w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">360° Visualization</h3>
+                        <p class="text-gray-300">Explore global ocean albedo patterns from every angle in stunning 3D.</p>
+                    </div>
+                    <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/50 transition">
+                        <div class="w-16 h-16 bg-cyan-500/10 rounded-lg flex items-center justify-center mb-4">
+                            <i data-feather="clock" class="text-cyan-400 w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Time Travel</h3>
+                        <p class="text-gray-300">Navigate through decades of NASA satellite observations with intuitive controls.</p>
+                    </div>
+                    <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20 hover:border-cyan-400/50 transition">
+                        <div class="w-16 h-16 bg-cyan-500/10 rounded-lg flex items-center justify-center mb-4">
+                            <i data-feather="bar-chart-2" class="text-cyan-400 w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Data Insights</h3>
+                        <p class="text-gray-300">See how ocean reflectivity correlates with climate patterns and human activity.</p>
+                    </div>
+                </div>
+
+                <div class="mt-16 max-w-5xl mx-auto bg-gray-800/50 backdrop-blur-sm rounded-xl overflow-hidden border border-cyan-400/20">
+                    <div class="aspect-w-16 aspect-h-9 w-full">
+                        <img src="http://static.photos/technology/1024x576/42" alt="VR Experience Preview" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-2xl font-bold mb-4">Preview Our VR Environment</h3>
+                        <p class="text-gray-300 mb-6">
+                            Our virtual reality experience combines NASA's MODIS and VIIRS satellite data with climate models to create an interactive journey through ocean albedo oscillations.
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-cyan-500/10 text-cyan-400 px-3 py-1 rounded-full text-sm">NASA Data</span>
+                            <span class="bg-cyan-500/10 text-cyan-400 px-3 py-1 rounded-full text-sm">Climate Science</span>
+                            <span class="bg-cyan-500/10 text-cyan-400 px-3 py-1 rounded-full text-sm">VR Education</span>
+                            <span class="bg-cyan-500/10 text-cyan-400 px-3 py-1 rounded-full text-sm">Immersive Learning</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="learn" class="py-24 bg-gray-900">
+            <div class="container mx-auto px-6 lg:px-12">
+                <div class="max-w-4xl mx-auto text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        The Science of <span class="gradient-text">Ocean Albedo</span>
+                    </h2>
+                    <p class="text-xl text-gray-300">
+                        Understanding how the ocean's reflectivity affects Earth's climate system.
+                    </p>
+                </div>
+
+                <div class="flex flex-col lg:flex-row gap-12 mb-16">
+                    <div class="lg:w-1/2">
+                        <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20 h-full">
+                            <h3 class="text-2xl font-bold mb-4">What is Ocean Albedo?</h3>
+                            <p class="text-gray-300 mb-4">
+                                Albedo refers to the fraction of sunlight that is reflected by a surface. Ocean albedo varies based on factors like:
+                            </p>
+                            <ul class="space-y-3 text-gray-300 mb-6">
+                                <li class="flex items-start">
+                                    <i data-feather="check-circle" class="text-cyan-400 mr-2 mt-1 flex-shrink-0"></i>
+                                    <span>Solar zenith angle (time of day)</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="check-circle" class="text-cyan-400 mr-2 mt-1 flex-shrink-0"></i>
+                                    <span>Wave conditions and sea state</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="check-circle" class="text-cyan-400 mr-2 mt-1 flex-shrink-0"></i>
+                                    <span>Presence of surface films or biological material</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i data-feather="check-circle" class="text-cyan-400 mr-2 mt-1 flex-shrink-0"></i>
+                                    <span>Atmospheric conditions and aerosol loading</span>
+                                </li>
+                            </ul>
+                            <div class="aspect-w-16 aspect-h-9 w-full rounded-lg overflow-hidden">
+                                <img src="http://static.photos/science/1024x576/12" alt="Ocean Albedo Diagram" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:w-1/2">
+                        <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-cyan-400/20 h-full">
+                            <h3 class="text-2xl font-bold mb-4">Why It Matters</h3>
+                            <p class="text-gray-300 mb-4">
+                                Ocean albedo oscillations play a crucial role in Earth's energy balance and climate system:
+                            </p>
+                            <div class="grid sm:grid-cols-2 gap-4 mb-6">
+                                <div class="bg-gray-700/50 p-4 rounded-lg">
+                                    <i data-feather="sun" class="text-yellow-400 mb-2"></i>
+                                    <h4 class="font-semibold">Energy Budget</h4>
+                                    <p class="text-sm text-gray-300">Affects how much solar energy Earth retains</p>
+                                </div>
+                                <div class="bg-gray-700/50 p-4 rounded-lg">
+                                    <i data-feather="thermometer" class="text-red-400 mb-2"></i>
+                                    <h4 class="font-semibold">Climate Feedback</h4>
+                                    <p class="text-sm text-gray-300">Impacts temperature regulation patterns</p>
+                                </div>
+                                <div class="bg-gray-700/50 p-4 rounded-lg">
+                                    <i data-feather="wind" class="text-blue-400 mb-2"></i>
+                                    <h4 class="font-semibold">Weather Patterns</h4>
+                                    <p class="text-sm text-gray-300">Influences atmospheric circulation</p>
+                                </div>
+                                <div class="bg-gray-700/50 p-4 rounded-lg">
+                                    <i data-feather="activity" class="text-green-400 mb-2"></i>
+                                    <h4 class="font-semibold">Ecosystems</h4>
+                                    <p class="text-sm text-gray-300">Affects marine biological activity</p>
+                                </div>
+                            </div>
+                            <div class="aspect-w-16 aspect-h-9 w-full rounded-lg overflow-hidden">
+                                <img src="http://static.photos/nature/1024x576/23" alt="Climate Impact" class="w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-cyan-600/20 to-blue-600/20 rounded-xl p-8 border border-cyan-400/30">
+                    <div class="flex flex-col md:flex-row items-center gap-8">
+                        <div class="md:w-1/3 flex justify-center">
+                            <img src="http://static.photos/technology/320x240/15" alt="NASA Satellite" class="rounded-lg w-full max-w-xs">
+                        </div>
+                        <div class="md:w-2/3">
+                            <h3 class="text-2xl font-bold mb-4">NASA's Earth Observing System</h3>
+                            <p class="text-gray-300 mb-4">
+                                Our VR experience is powered by data from NASA's fleet of Earth-observing satellites, including MODIS (Moderate Resolution Imaging Spectroradiometer) and VIIRS (Visible Infrared Imaging Radiometer Suite).
+                            </p>
+                            <a href="#" class="inline-flex items-center text-cyan-400 hover:text-cyan-300 font-medium">
+                                Explore NASA's Open Data
+                                <i data-feather="external-link" class="ml-2 w-4 h-4"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 bg-gradient-to-b from-gray-900 to-cyan-900/30">
+            <div class="container mx-auto px-6 lg:px-12">
+                <div class="max-w-4xl mx-auto text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                        Ready to <span class="gradient-text">Dive In?</span>
+                    </h2>
+                    <p class="text-xl text-gray-300">
+                        Experience Ocean Albedo Oscillations in virtual reality today.
+                    </p>
+                </div>
+
+                <div class="max-w-3xl mx-auto bg-gray-800/50 backdrop-blur-sm rounded-xl p-8 border border-cyan-400/20">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="flex flex-col">
+                            <h3 class="text-xl font-bold mb-4">Access the Experience</h3>
+                            <p class="text-gray-300 mb-6">
+                                Available on multiple VR platforms and as a web-based interactive experience.
+                            </p>
+                            <div class="flex flex-wrap gap-3 mt-auto">
+                                <a href="#" class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-lg flex items-center gap-2">
+                                    <i data-feather="smartphone" class="w-4 h-4"></i>
+                                    <span>Mobile VR</span>
+                                </a>
+                                <a href="#" class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-lg flex items-center gap-2">
+                                    <i data-feather="monitor" class="w-4 h-4"></i>
+                                    <span>Desktop</span>
+                                </a>
+                                <a href="#" class="bg-gray-700 hover:bg-gray-600 px-4 py-2 rounded-lg flex items-center gap-2">
+                                    <i data-feather="box" class="w-4 h-4"></i>
+                                    <span>Standalone VR</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex flex-col">
+                            <h3 class="text-xl font-bold mb-4">Stay Updated</h3>
+                            <p class="text-gray-300 mb-4">
+                                Join our mailing list for updates on new features and datasets.
+                            </p>
+                            <form class="space-y-3">
+                                <input type="email" placeholder="Your email" class="w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+                                <button type="submit" class="w-full bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-lg font-medium">
+                                    Subscribe
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="relative z-10 py-12 bg-gray-900/80 backdrop-blur-sm border-t border-gray-800">
+        <div class="container mx-auto px-6 lg:px-12">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center space-x-2 mb-6 md:mb-0">
+                    <i data-feather="globe" class="text-cyan-400"></i>
+                    <span class="text-xl font-bold gradient-text">OceanicVR</span>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition">
+                        <i data-feather="github"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition">
+                        <i data-feather="twitter"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition">
+                        <i data-feather="youtube"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">
+                    © 2023 Oceanic VR Odyssey. All rights reserved.
+                </p>
+                <div class="flex flex-wrap gap-4 text-sm">
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition">Terms of Service</a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition">Credits</a>
+                    <a href="#" class="text-gray-400 hover:text-cyan-400 transition">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Vanta.js background effect
+        VANTA.WAVES({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x0066ff,
+            shininess: 35.00,
+            waveHeight: 15.00,
+            waveSpeed: 0.75,
+            zoom: 0.85
+        });
+
+        // Feather icons
+        feather.replace();
+    </script>
+</body>
+</html>
